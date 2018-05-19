@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Autofill</title>
+
+    <style>
+        body {
+            height: 100vh;
+            background-color: antiquewhite;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6 border border-danger">
+                <form action="/showMe" method="post">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" class="form-control" id="firstName">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" class="form-control" id="lastName">
+                        <button class="btn mt-3 btn-success btn-block">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-6">
+                <form action="#" method="get" class="mt-5">
+                    <label for="search">Search Bar</label>
+                    <input type="text" class="form-control">
+                    <ul class="list-group">
+                        <!--Hint: You may inject the result of query as <li> elements here-->
+                        <!-- <li class="list-group-item">Bruce Wayne</li>
+                        <li class="list-group-item">Clark, Kent</li>
+                        <li class="list-group-item">Diana Prince</li> -->
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
