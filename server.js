@@ -12,7 +12,7 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const bodyparser = require("body-parser");
 
-const apiRouter = require("./api");
+// const apiRouter = require("./api");
 
 const app = express();
 const router = express.Router();
@@ -29,7 +29,7 @@ app.set("view engine", "hbs");
 app.use(express.static("public"));
 app.use(express.static("assets"));
 
-app.use("/api", apiRouter);
+// app.use("/api", apiRouter);
 
 // handle HTTP POST requests
 app.use(bodyparser.json());
@@ -62,13 +62,11 @@ app.get("/customers/name/:firstname", function (req, res) {
       });
     });
 });
-app.post("/customers/", function (req, res) {
-  var ttl = req.body.title;
+app.post("/showme/", function (req, res) {
   var fnm = req.body.firstname;
   var snm = req.body.surname;
-  var eml = req.body.email;
-  db.run("INSERT INTO customers (title, firstname, surname, email) VALUES (?, ?, ?, ?)",
-    [ttl, fnm, snm, eml], function (err) {
+  db.run("INSERT INTO customers (firstname, surname) VALUES (?, ?)",
+    [fnm, snm], function (err) {
       if (err == null) {
         var rowid = this.lastID;  //get the PK
         var rowchange = this.changes;

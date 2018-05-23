@@ -21,12 +21,12 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-6 border border-danger">
-                <form action="/showMe" method="post">
+                <form action="/showMe" method="post" id="custForm">
                     <div class="form-group">
                         <label for="firstName">First Name</label>
                         <input type="text" name="firstName" class="form-control" id="firstName">
                         <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" class="form-control" id="lastName">
+                        <input type="text" name="surName" class="form-control" id="surName">
                         <button class="btn mt-3 btn-success btn-block">Submit</button>
                     </div>
                 </form>
@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-
+    <script src="/ajax.js"></script>
 </body>
 
 </html>
